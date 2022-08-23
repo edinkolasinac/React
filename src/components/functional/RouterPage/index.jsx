@@ -11,6 +11,7 @@ import Settings from "./Seetings";
 import Invoices from "./Invoices";
 import Invoice from "./Invoices/Invoice";
 import SentInvoices from "./Invoices/SentInvoices";
+import InvoicesCard from "./Invoices/card";
 
 const RouterPage = (props) => {
   return (
@@ -35,6 +36,9 @@ const RouterPage = (props) => {
           <Route index element={<div>invoces</div>} />
           <Route path=":invoiceId" element={<Invoice />} />
           <Route path="sent" element={<SentInvoices />} />
+          <Route index element={<InvoicesCard />} />
+
+
         </Route>
 
         <Route path="*" element={<Page404 />} />
